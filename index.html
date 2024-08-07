@@ -3,236 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraj Bhutani's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Suraj Bhutani - Portfolio</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
+            background-color: #f4f4f4;
             color: #333;
-            overflow-x: hidden;
         }
+
         header {
-            background: #1e272e;
-            color: #ffffff;
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            height: 80px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         header h1 {
             margin: 0;
             font-size: 2.5em;
         }
-        header p {
-            margin: 0;
-            font-size: 1.2em;
+
+        nav {
+            margin-top: 10px;
         }
-        .container {
-            padding: 100px 20px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section {
-            margin-bottom: 40px;
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        .section:hover {
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        }
-        .section h2 {
-            background: #1e272e;
-            color: #ffffff;
-            padding: 15px;
-            margin: -30px -30px 20px;
-            border-radius: 12px 12px 0 0;
-            font-size: 2em;
-            text-transform: uppercase;
-        }
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .section li {
-            padding: 10px 0;
-            border-bottom: 1px solid #ecf0f1;
-        }
-        a {
-            color: #007bff;
+
+        nav a {
+            color: #fff;
             text-decoration: none;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            padding: 10px 15px;
+            background-color: #555;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
-        a:hover {
-            color: #0056b3;
-            text-decoration: underline;
+
+        nav a:hover {
+            background-color: #777;
         }
-        .footer {
-            background: #1e272e;
-            color: #ffffff;
-            text-align: center;
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
             padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .footer p {
-            margin: 0;
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        .profile-image {
+
+        .profile img {
+            border-radius: 50%;
+            margin-right: 20px;
             width: 150px;
             height: 150px;
-            border-radius: 50%;
-            border: 4px solid #007bff;
-            margin: 20px 0;
+            object-fit: cover;
         }
-        .hero {
-            background: url('https://via.placeholder.com/1920x400') no-repeat center center;
-            background-size: cover;
-            color: #ffffff;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3em;
+
+        .profile h2 {
             margin: 0;
-        }
-        .hero p {
-            font-size: 1.5em;
-            margin: 10px 0;
-        }
-        .banner {
-            background: url('https://via.placeholder.com/1920x200') no-repeat center center;
-            background-size: cover;
-            color: #ffffff;
-            padding: 50px 20px;
-            text-align: center;
             font-size: 2em;
-            font-weight: bold;
         }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1em;
-            }
-            .hero h1 {
-                font-size: 2em;
-            }
-            .hero p {
-                font-size: 1.2em;
-            }
-            .banner {
-                font-size: 1.5em;
-            }
+
+        .profile p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        .projects, .contact {
+            margin-top: 30px;
+        }
+
+        .projects h3, .contact h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .project-item h4 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+        }
+
+        .project-item p {
+            margin: 0;
+            color: #666;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact label {
+            margin-top: 10px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            resize: none;
+        }
+
+        .contact button {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Suraj Bhutani</h1>
-            <p>IT Professional | Computer Systems Technician</p>
-        </div>
+        <h1>Suraj Bhutani</h1>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section class="banner">
-        <div class="container">
-            Computer Systems Technician
-        </div>
-    </section>
-
-    <section class="hero">
-        <div class="container">
-            <img src="https://via.placeholder.com/150" alt="Suraj Bhutani" class="profile-image">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Explore my projects, skills, and experiences.</p>
-        </div>
-    </section>
-
     <div class="container">
-        <section class="contact-info section">
-            <h2>Contact Information</h2>
-            <p><strong>Address:</strong> Cambridge, ON N3H 4J9</p>
-            <p><strong>Phone:</strong> (519) 716-2903</p>
-            <p><strong>Email:</strong> <a href="mailto:namosuraj2@gmail.com">namosuraj2@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/surajbhu/" target="_blank">LinkedIn Profile</a></p>
+        <section id="profile" class="profile">
+            <img src="your-image-url.jpg" alt="Profile Picture">
+            <div>
+                <h2>Suraj Bhutani</h2>
+                <p>IT Support Technician | Web Developer | Tech Enthusiast</p>
+            </div>
         </section>
 
-        <section class="career-objective section">
-            <h2>Career Objective</h2>
-            <p>To secure a full-time IT position starting in September 2024 where I can utilize my technical skills, demonstrate my ability to deliver quality solutions, and contribute to organizational goals.</p>
+        <section id="projects" class="projects">
+            <h3>Projects</h3>
+            <div class="project-item">
+                <img src="project-image-url1.jpg" alt="Project 1">
+                <h4>Project Title 1</h4>
+                <p>Brief description of the project. Highlight key features and technologies used.</p>
+            </div>
+            <div class="project-item">
+                <img src="project-image-url2.jpg" alt="Project 2">
+                <h4>Project Title 2</h4>
+                <p>Brief description of the project. Highlight key features and technologies used.</p>
+            </div>
+            <!-- Add more projects as needed -->
         </section>
 
-        <section class="skills section">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Proficiency in Microsoft Office 365 (Word, Excel, PowerPoint)</li>
-                <li>Hardware installation and maintenance</li>
-                <li>Familiarity with documentation standards and user manuals</li>
-                <li>Helpdesk support and Microsoft Exchange administration</li>
-                <li>Web development and coding practices</li>
-                <li>Strong soft skills (communication, problem-solving, time management, attention to detail, critical thinking, creativity, leadership)</li>
-            </ul>
-        </section>
+        <section id="contact" class="contact">
+            <h3>Contact</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-        <section class="experience section">
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>DLS IT Support Technician (Co-op)</strong>, VAR Lab, Waterloo, Ontario (Jan 2024 - Present)</li>
-                <li><strong>Cashier</strong>, Canadian Tire, Cambridge, Ontario (Oct 2022 - Present)</li>
-                <li><strong>Lifeguard</strong>, Canada’s Wonderland, Vaughan, Ontario (May 2023 – Sep 2023)</li>
-                <li><strong>Marketing Trainee</strong>, Stride Ahead, New Delhi, India (Jun 2021 – Aug 2022)</li>
-            </ul>
-        </section>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-        <section class="education section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Computer Systems Technician (Co-op)</strong>, Conestoga College, Waterloo, ON (Sep 2022 - Present)</li>
-                <li><strong>High School Diploma</strong>, DL DAV Model School, New Delhi, India (Jul 2021)</li>
-            </ul>
-        </section>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-        <section class="volunteering section">
-            <h2>Volunteering</h2>
-            <ul>
-                <li><strong>Orientation Volunteer</strong>, Conestoga College, ON (Winter 2023, Spring 2023, Fall 2023)</li>
-                <li><strong>Summer Camp Volunteer</strong>, Radha Krishna Mandir and Cultural Centre, Cambridge, ON</li>
-            </ul>
-        </section>
-
-        <section class="hobbies section">
-            <h2>Hobbies / Activities</h2>
-            <ul>
-                <li>Cycling, swimming, soccer</li>
-                <li>Learning new technology (cloud computing)</li>
-                <li>Nature photography</li>
-            </ul>
-        </section>
-
-        <section class="languages section">
-            <h2>Languages</h2>
-            <ul>
-                <li><strong>English:</strong> Proficient</li>
-                <li><strong>Hindi:</strong> Native</li>
-            </ul>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 Suraj Bhutani. All rights reserved.</p>
-    </footer>
 </body>
 </html>
